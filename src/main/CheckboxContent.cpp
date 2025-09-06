@@ -4,8 +4,6 @@
 
 namespace Notes {
 
-// --- CheckboxContent Implementations ---
-
 /**
  * @brief Constructs a checkbox item with given text.
  * @param text The label text for the checkbox.
@@ -26,8 +24,6 @@ CheckboxContent& CheckboxContent::toggle() {
  * @brief Displays the checkbox state and text.
  */
 std::string CheckboxContent::view() const {
-    // This method must return a string, not print to cout.
-    // The previous implementation was incorrect and is now fixed.
     return std::string{m_checked ? "[X] " : "[ ] "} + m_text.data();
 }
 
@@ -36,7 +32,6 @@ std::string CheckboxContent::view() const {
  * @param newText The new label text for the checkbox.
  */
 void CheckboxContent::edit(const std::string& newText) {
-    // This is the missing method that caused the linker error.
     m_text = newText;
 }
 
@@ -48,4 +43,4 @@ bool CheckboxContent::isChecked() const noexcept {
     return m_checked;
 }
 
-} // namespace Notes
+}
