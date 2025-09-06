@@ -8,6 +8,11 @@
 
 namespace Notes {
 
+/**
+ * @class Notes
+ * @brief Manages a collection of Note objects.
+ * This class provides functionality for adding, finding, removing, and iterating over notes.
+ */
 class Notes {
 public:
     /**
